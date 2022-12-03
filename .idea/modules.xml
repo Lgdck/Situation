@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CHATErealtest/CHATErealtest.iml" filepath="$PROJECT_DIR$/CHATErealtest/CHATErealtest.iml" />
       <module fileurl="file://$PROJECT_DIR$/situation-common/situation-common.iml" filepath="$PROJECT_DIR$/situation-common/situation-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/situation-packet-send/situation-packet-send.iml" filepath="$PROJECT_DIR$/situation-packet-send/situation-packet-send.iml" />
       <module fileurl="file://$PROJECT_DIR$/situation-parent.iml" filepath="$PROJECT_DIR$/situation-parent.iml" />

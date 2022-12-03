@@ -2,6 +2,29 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/async/MainGeneric.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/1.pcap" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/Service/ParseService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/Util/DataUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/Util/DevideFile.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/Util/HashAlgorithm.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/Util/IPUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/Util/MurmurHash3.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/entity/IPHeader.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/entity/MACHeader.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/entity/NBStructure.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/entity/PacketHeader.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/entity/TCPHeader.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/entity/custom/1.pcap" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/entity/custom/Ip.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/entity/custom/Mac.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/entity/custom/ParseAll.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/entity/custom/TotalEntiy.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/parse/entity/custom/Transmission.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/test/TestNewMap.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/test/TestNewMap2.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/CHATErealtest/src/main/java/util/bloom/CHTE/test/filetest.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/situation-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/situation-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/situation-common/src/main/resources" charset="UTF-8" />
