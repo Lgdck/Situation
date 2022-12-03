@@ -1,0 +1,29 @@
+<component name="libraryTable">
+  <library name="xmlrpc-2.0-a1-dev">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/xmlrpc-2.0-a1-dev.jar!/" />
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/util-prp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/slf4j-api-1.7.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/simjava.jar!/" />
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/pcap4j-sample-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/pcap4j-packettest-1.7.0-tests.jar!/" />
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/pcap4j-packetfactory-static-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/pcap4j-packetfactory-propertiesbased-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/pcap4j-core-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/log4j-over-slf4j-1.7.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/jul-to-slf4j-1.7.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/jna-4.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/guava-r09.jar!/" />
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/commons-collections-3.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/commons-codec-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/annotations-12.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/pcap4j-1.7.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/situation-web-parent/situation-web-vision/lib/util-prp.jar!/" />
+    </SOURCES>
+  </library>
+</component>

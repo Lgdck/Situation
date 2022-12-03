@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="situation.dao.Mapper.DelayMapper">
+
+
+    <resultMap id="delayMap" type="com.situation.entity.DelayMap">
+        <result property="time" column="time"/>
+        <result property="count1" column="count1"/>
+        <result property="avg1" column="avg1"/>
+        <result property="count2" column="count2"/>
+        <result property="avg2" column="avg2"/>
+        <result property="avgLength" column="avg_length"/>
+        <result property="loss" column="loss"/>
+    </resultMap>
+
+    <!--<select id="findMinId" resultMap="minIdMap" parameterType="java.util.Date">-->
+
+    <!--</select>-->
+
+    <select id="getDelay" resultMap="delayMap" parameterType="java.lang.String">
+        SELECT t1.time TIME, t1.count count1,avg1,t2.count count2 ,avg_delay avg2,avg_length,(ABS(avg1-avg_delay)/avg1)*100 AS loss
+        FROM
+        (SELECT DATE_FORMAT(send_time,'%Y-%m-%d %H:%i:%s')AS TIME, COUNT(*) COUNT,ROUND(AVG(delay1),1) avg1
+        FROM delay WHERE DATE_FORMAT(send_time,'%Y-%m-%d %H:%i:%s')=#{sendTime}
+        )t1,
+        (SELECT * FROM rda WHERE TIME >= #{sendTime}) t2
+        WHERE t1.time = t2.time;
+    </select>
+
+    <select id="getNew" resultMap="delayMap" parameterType="java.lang.String">
+        select t1.time time, t1.count count1,avg1,t2.count count2 ,avg_delay avg2,avg_length,(abs(avg1-avg_delay)/avg1)*100 as loss
+        from
+        (select date_format(send_time,'%Y-%m-%d %H:%i:%s')as time, count(*) count,round(avg(delay1),1) avg1
+        from delay
+        group by date_format(send_time,'%Y-%m-%d %H:%i:%s')) t1,
+        (select * from rda where id=(select max(id) from rda)) t2
+        where t1.time = t2.time;
+    </select>
+</mapper>
+
+        <!--SELECT t1.time TIME, t1.count count1,avg1,t2.count count2 ,avg_delay avg2,avg_length,(ABS(avg1-avg_delay)/avg1)*100 AS loss-->
+        <!--FROM-->
+        <!--(SELECT DATE_FORMAT(send_time,'%Y-%m-%d %H:%i:%s')AS TIME, COUNT(*) COUNT,ROUND(AVG(delay1),1) avg1-->
+        <!--FROM delay WHERE id =-->
+        <!--(select min(id) from delay where DATE_FORMAT(send_time,'%Y-%m-%d %H:%i:%s')>=#{sendTime})-->
+        <!--GROUP BY DATE_FORMAT(send_time,'%Y-%m-%d %H:%i:%s'))t1,-->
+        <!--(SELECT * FROM rda WHERE TIME = #{sendTime}) t2-->
+        <!--WHERE t1.time = t2.time;-->

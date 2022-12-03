@@ -1,0 +1,19 @@
+server1:
+  host: 49.235.199.128
+  port: 22
+  user: root
+  password: root
+
+server2:
+  host: 212.129.237.80
+  port: 22
+  user: root
+  password: root
+
+
+myvmserver:
+  ip: 192.168.211.128
+  port: 22
+  user: root
+  password: root
+

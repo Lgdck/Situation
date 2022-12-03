@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 页面meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>upload</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="/plugins/elementui/index.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- 引入组件库 -->
+    <script src="/js/vue.js"></script>
+    <script src="/plugins/elementui/index.js"></script>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script src="/js/axios-0.18.0.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div id="app" style="display: none">
+    <div class="add-form">
+        <el-form label-position="right" label-width="100px">
+            <!--<el-row>-->
+                <!--<el-col :span="12">-->
+                    <!--<el-form-item label="目的ip">-->
+                        <!--<el-input v-model="formData.packet.destIp"/>-->
+                    <!--</el-form-item>-->
+                <!--</el-col>-->
+                <!--<el-col :span="12">-->
+                    <!--<el-form-item label="协议">-->
+                        <!--<el-input v-model="formData.packet.protocol"/>-->
+                    <!--</el-form-item>-->
+                <!--</el-col>-->
+                <!--<el-col :span="12">-->
+                    <!--<el-form-item label="目的端口">-->
+                        <!--<el-input v-model="formData.packet.destport"/>-->
+                    <!--</el-form-item>-->
+                <!--</el-col>-->
+                <!--<el-col :span="12">-->
+                    <!--<el-form-item label="频率">-->
+                        <!--<el-input v-model="formData.packet.frequence"/>-->
+                    <!--</el-form-item>-->
+                <!--</el-col>-->
+                <!--<el-col :span="12">-->
+                    <!--<el-form-item label="个数">-->
+                        <!--<el-input v-model="formData.packet.count"/>-->
+                    <!--</el-form-item>-->
+                <!--</el-col>-->
+            <!--</el-row>-->
+            <el-card class="box-card">
+                <div class="boxMain">
+                    <el-button style="margin-bottom: 20px;margin-right: 20px" type="primary" @click="downloadTemplate()">模板下载</el-button>
+                    <el-upload action="/send/upload"
+                               name="privateKeyFile"
+                               :show-file-list="false"
+                               :on-success="handleSuccess"
+                               :before-upload="beforeUpload">
+                        <el-button type="primary">上传文件</el-button>
+                    </el-upload>
+                </div>
+                <div>
+                    操作说明：请点击"模板下载"按钮获取模板文件，在模板文件中录入数据后点击"上传文件"按钮上传模板文件。
+                </div>
+            </el-card>
+        </el-form>
+
+    </div>
+</div>
+</body>
+<!-- 引入组件库 -->
+<script src="/js/vue.js"></script>
+<script src="/plugins/elementui/index.js"></script>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data:{
+            today:new Date(),//当前日期
+            currentDay: 1,
+            currentMonth: 1,
+            LocalMonth: 1,
+            currentYear: 1970,
+            currentWeek: 1,
+            days: [],
+            leftobj: []//用于装载页面显示的月份已经进行预约设置的数据
+        },
+        created: function () {//在vue初始化时调用
+
+        },
+        mounted(){
+            document.getElementById("app").style.display='block';
+        },
+        methods: {
+            //上传之前进行文件格式校验
+            beforeUpload(file){
+                return true;
+                //这是自己写的判断方式
+                let name=file.name.substring(file.name.lastIndexOf('.'));
+                if (name==='.xlsx' || name==='.xls'){
+                    return true;
+                }else {
+                    this.$message.error('上传文件只能是xls或xlsx');
+                    return false;
+                }
+                //看不懂
+                /*
+                const isXLS = file.type === 'application/vnd.ms-excel';
+                if(isXLS){
+                    return true;
+                }
+                const isXLSX = file.type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+                if (isXLSX) {
+                    return true;
+                }
+                this.$message.error('上传文件只能是xls或者xlsx格式!');
+                return false;
+                */
+            },
+            //下载模板文件  整个流程是 下载模板  填好模板 上传写好的模板  导入数据库  显示  更改预约设置
+            downloadTemplate(){
+                window.location.href="/template/test.xlsx";
+            },
+            //上传成功提示
+            handleSuccess(response, file) {
+                if(response.success){
+                    this.$message({
+                        message: response.message,
+                        type: 'success'
+                    });
+                }else{
+                    this.$message.error(response.message);
+                }
+                console.log(response, file);
+            },
+
+        }
+    })
+</script>
+
+
+</html>
